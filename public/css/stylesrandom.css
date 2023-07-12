@@ -1,0 +1,17 @@
+h1, h2 {
+    text-align:center;
+}
+p {
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 32%;
+    height: auto;
+    
+}
+iframe {
+    display:block;
+}

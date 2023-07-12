@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="../css/stylesnothome.css" rel="stylesheet">
+    <link href="../css/stylessignup.css" rel="stylesheet">
+  	<link rel="icon" type="image/x-icon" href="../images/J.png" />
+</head>
+<body>
+    <a href="../index.html" class="button">Home</a>
+    <h2>
+        Log In
+    </h2>
+    <form action="/login" method="POST">
+        <label><b>Email:</b></label>
+            <input type="text" name="email" placeholder="Email"><br><br>
+        <label><b>Password:</b></label>
+            <input type="password" name="password" placeholder="Password"><br><br>
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label><br>
+        <button type="submit">Log in</button><br>
+      </form>
+      
+      <a href="forgot">Forgot password</a>
+      <br> <br>
+    <div class="footer">
+        <ul>
+            <li><a href="../legal/donor.html">Donors</a></li>
+            <li><a href="../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="../legal/cookies.html">Cookie Policy</a></li>
+            <li><a href="../careers/careers.html">Careers</a></li>
+            <li><span class="small">&copy 2023 JRFink LLC</span></li>
+        </ul>  
+    </div>
+    <script>
+        function displayFormContents() {
+            let holder = document.getElementById("frm1");
+            let myContents = "";
+            myContents += "<b>Email:</b>" + ' ' + holder.elements[0].value + "<br><br>";
+            myContents += "<b>Password:</b> *********** <br><br>";
+            document.getElementById('frm1').innerHTML = myContents;  
+        }
+    </script>
+</body>
+</html>

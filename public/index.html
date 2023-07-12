@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JRFink</title>
+    <link href="css/styleshome.css" rel="stylesheet" type="text/css">
+    <link href="css/stylesvid.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  	<link rel="icon" type="image/x-icon" href="images/J.png" />
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top_nav">
+          
+                <div class="left">
+                    <div class="logo">
+                        <p>
+                            <span>
+                                JRFink
+                            </span>
+                        </p>
+                    </div>
+                    <div class="descrip">
+                      Physics education & research
+                    </div>
+                    </p>
+                </div>
+                <div class="right">
+                  <ul>
+                    <li><a href="auth/login">Login</a></li>
+                    <li><a href="auth/signup">Sign Up</a></li>
+                  </ul>
+                </div>
+        </div>
+        <div class="bottom_nav"> 
+          <ul>           
+              <li><a href="education">Education</a></li>
+              <li><a href="research/research.html">Research</a></li>
+              <li><a href="random/random.html">Random</a></li>
+              <li><a href="about">About</a></li>
+          </ul>
+        </div>  
+    </div>
+    <br> <br>
+    <div class="slideshow-container"> 
+      <div class="mySlides fade"> 
+        <img src="images/entanglement.png" style="width:110%">    
+      </div> 
+      <div class="mySlides fade">  
+        <img src="images/standmodel.svg" style="width:40%">
+      </div>
+      <div class="mySlides fade">   
+        <img src="images/qgp.png" style="width:46%">
+      </div>
+    </div> 
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div> 
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+      }
+    </script>
+  <br> <br>
+  <h2>
+    Hello
+  </h2>
+  <br> <br>
+  <div class="video">
+    <iframe width="700" height="394" src="https://player.vimeo.com/video/766511495?h=7c1f731548&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        title="Intro" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  <p class="space">
+  </p>
+  <div class="footer">
+      <ul>
+        <li><a href="legal/donor.html">Donors</a></li>
+        <li><a href="legal/terms.html">Terms of Service</a></li>
+        <li><a href="legal/privacy.html">Privacy Policy</a></li>
+        <li><a href="legal/cookies.html">Cookie Policy</a></li>
+        <li><a href="careers/careers.html">Careers</a></li>
+        <li><span class="small">&copy 2023 JRFink LLC</span></li>
+      </ul>  
+  </div>
+</body>
+</html>

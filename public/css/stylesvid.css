@@ -1,0 +1,20 @@
+.video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bv {
+    font-size: smaller;
+    margin: 0 auto;
+}
+.space {
+    margin-bottom: 3cm;
+}
+h2, h3 {
+    color:rgb(44, 64, 252);
+    text-align:center;
+}
+p.small {
+    font-size: 6px;
+}

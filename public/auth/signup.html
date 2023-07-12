@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="../css/stylesnothome.css" rel="stylesheet">
+    <link href="../css/stylessignup.css" rel="stylesheet">
+  	<link rel="icon" type="image/x-icon" href="../images/J.png" />
+</head>
+<body>
+    <a href="/" class="button">Home</a>
+    <h2>
+        Sign Up
+    </h2>
+    <p>
+        You won't receive anything right now for signing up, but we will be in contact!  
+    </p>
+ <form action="/signup" method="POST">
+    <label for="firstname"><b>First name:</b></label>
+        <input type="text" id="firstname" name="firstname" placeholder="First name"><br>
+    <label><b>Last name:</b></label>
+        <input type="text" name="lastname" placeholder="Last name"><br>
+    <label><b>Email:</b></label>
+        <input type="text" name="email" placeholder="Email"><br>
+    <label><b>Phone:</b></label>
+        <input type="tel" name="phone" placeholder="303-867-5309" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+    <label><b>Password:</b></label>
+        <input type="password" name="password" placeholder="Password"><br>
+    <label><b>Repeat Password:</b></label>
+        <input type="password" name="passwordrepeat" placeholder="Repeat password"><br><br>
+    <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label><br>
+    <p>
+        By creating an account you agree to our <a href="../legal/terms.html">Terms</a> and <a href="../legal/privacy.html">Privacy Policy</a>.
+    </p>
+    <button type="submit">Sign up</button>
+</form>
+
+
+<br>
+<p>
+    Once you have an account, you will be able to access some of the content on the site for free or everything with a paid <a href="subscription.html">subscription</a>. 
+    We'll process payments through <a href="https://billing.stripe.com/p/login/cN25nhanseRWb2E6oo">Stripe</a>. 
+</p>
+
+<br> <br>
+        <div class="footer">
+            <ul>
+                <li><a href="../legal/donor.html">Donors</a></li>
+                <li><a href="../legal/terms.html">Terms of Service</a></li>
+                <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+                <li><a href="../legal/cookies.html">Cookie Policy</a></li>
+                <li><a href="../careers/careers.html">Careers</a></li>
+                <li><span class="small">&copy 2023 JRFink LLC</span></li>
+            </ul>  
+        </div>
+    <script>
+        function displayFormContents() {
+            let holder = document.getElementById("frm1");
+            let myContents = "";
+            myContents += "<b>First name:</b>" + ' ' + holder.elements[0].value + "<br>";
+            myContents += "<b>Last name:</b>" + ' ' + holder.elements[1].value + "<br>";
+            myContents += "<b>Email:</b>" + ' ' + holder.elements[2].value + "<br>";
+            myContents += "<b>Phone:</b>" + ' ' + holder.elements[3].value + "<br>";
+            myContents += "<b>Password:</b> *********** <br><br>";
+            document.getElementById('frm1').innerHTML = myContents;  
+        }
+    </script>
+</body>
+</html>
