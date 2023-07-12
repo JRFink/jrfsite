@@ -3,7 +3,7 @@ branch-defaults:
     environment: null
     group_suffix: null
 global:
-  application_name: testeb
+  application_name: Jrfapp
   branch: null
   default_ec2_keyname: null
   default_platform: Node.js 18
