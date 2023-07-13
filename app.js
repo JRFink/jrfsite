@@ -13,7 +13,7 @@ config();
 
 const con = mysql.createConnection({
     host: process.env.MYHOST,
-    user: process.env.ADMIN, 
+    user: process.env.USER, 
     password: process.env.PW, 
     database: process.env.DB, 
     port: process.env.DBPORT
@@ -124,8 +124,8 @@ app.post('/login', (req, response) => {
     con.end();
 });
 
-const PORT = process.env.LISTENPORT || 5000;
+const port = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
-    console.log(`server started on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`server started on port ${port}`);
 })
