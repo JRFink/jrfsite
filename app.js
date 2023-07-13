@@ -124,7 +124,7 @@ app.post('/login', (req, response) => {
     con.end();
 });
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 443;
 
 app.listen(port, () => {
     console.log(`server started on port ${port}`);
