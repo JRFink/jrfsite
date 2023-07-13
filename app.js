@@ -117,7 +117,7 @@ app.post('/login', (req, response) => {
             const initialToken = jwt.sign(email, process.env.KEY);
             console.log(initialToken);
             // set key and value for cookie
-            response.cookie('_knw', initialToken, {maxAge: 6000000, httpOnly: true, secure: true, sameSite: 'Strict', priority: 'High'});
+            response.cookie('_knw', initialToken, {maxAge: 10000, httpOnly: true, secure: true, sameSite: 'Strict', priority: 'High'});
             response.redirect('/');
         }
     });
